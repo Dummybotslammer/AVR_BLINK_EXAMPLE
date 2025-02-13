@@ -1,0 +1,4 @@
+::long cmd: avr-g++ -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -flto -w -x c++ -E -CC -mmcu=atmega32u4 -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_LEONARDO -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x8036 -DUSB_MANUFACTURER="Unknown" -DUSB_PRODUCT="Arduino Leonardo" -IC:\Users\Zhong Wen\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\cores\arduino -IC:\Users\Zhong Wen\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\variants\leonardo C:\Users\Zhong Wen\AppData\Local\Temp\arduino\sketches\20A016BD6277D01644E4E70DE08A01FC\sketch\BareBlink.ino.ino.cpp -o nul
+avr-g++ -Os -mmcu=atmega328p blinker.cpp -o blinker.out
+avr-objcopy -O ihex -j .text -j .data blinker.out blinker.hex
+pause
